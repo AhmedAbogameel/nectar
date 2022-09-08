@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/constants.dart';
+import 'package:nectar/core/app_router/app_router.dart';
+import 'package:nectar/views/login/view.dart';
+import 'package:nectar/views/sign_up/view.dart';
 import 'package:nectar/widgets/confirm_button.dart';
 import 'package:nectar/widgets/my_text.dart';
 
@@ -24,7 +27,7 @@ class LoginOrSignUpView extends StatelessWidget {
             verticalMargin: 10,
             horizontalMargin: 20,
             title: 'Log in',
-            onPressed: () {},
+            onPressed: () => AppRouter.navigateAndPopAll(context, LoginView()),
           ),
           ConfirmButton(
             verticalMargin: 10,
@@ -32,7 +35,7 @@ class LoginOrSignUpView extends StatelessWidget {
             title: 'Create an account',
             backgroundColor: Colors.transparent,
             titleColor: kPrimaryColor,
-            onPressed: () {},
+            onPressed: () => AppRouter.navigateAndPopAll(context, SignUpView()),
           ),
         ],
       ),
