@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/constants.dart';
+import 'package:nectar/views/nav_bar/view.dart';
 import 'views/splash/view.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashView(),
+      home: NavBarView(),
       theme: theme,
       title: 'Nectar',
       builder: (context, child) => SafeArea(child: child!),
